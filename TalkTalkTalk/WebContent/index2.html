@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>글로벌 SNS - Talk Talk Talk</title>
+<style>
+@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+body{
+	margin : 0px;
+}
+
+nav{
+	font-family: 'BMJUA';
+	background-color : #2C3E50;
+	color : #ffffff;
+	padding : 40px;
+	border: none;
+	margin : 0 auto;
+}
+
+
+
+div>span {
+	font-size : 35px;
+}
+
+div>a {
+	float:right;
+	font-size:20px;
+	padding : 8px;
+}
+
+header, p{
+	  background-color: #91C8E0;
+	  margin : 0px;
+	  height : 700px;
+}
+
+figure{
+	margin : 0px;
+}
+
+#title{
+	font-size : 40px;
+}
+
+
+#signup{
+width:700px;
+height:950px;
+font-family: 'BMJUA';
+font-size : 20px;
+text-align: left;
+top: 150px;
+}
+
+
+#signUpForm{
+left: 400px;
+position:absolute;
+}
+
+input{
+margin:12px;
+padding: 20px;
+}
+
+
+input[type=text], [type=tel], [type=password], [type=date], [type=email]  {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #91C8E0;
+}
+
+
+
+#hobby{
+width: 650px;
+}
+
+button {
+	margin: 10px;
+	padding: 10px 15px;
+	font-family: 'BMJUA';
+  	font-size: 12pt;
+  	cursor: pointer;
+    text-align: center;
+ 	color: #fff; 
+  	background-color: #2C3E50;
+  	border: none;
+  	border-radius: 15px;
+  	box-shadow: 0 4px #ccccff; 
+}
+
+button:hover{
+background-color: #91C8E0; 
+}
+
+button:active{
+background-color: #ffff80; 
+}
+
+</style>
+</head>
+<body>
+
+<script>
+
+</script>
+
+<nav id="navibar">
+	<div>
+		<span id="title">CHAT CHAT</span>
+		<a id="ABOUT">ABOUT&nbsp;&nbsp;</a>
+		<a id="mypage">MY PAGE&nbsp;&nbsp;&nbsp;</a>
+		<a id="translate">TRANSLATE&nbsp;&nbsp;&nbsp;</a>
+		<a id="sns">SNS&nbsp;&nbsp;&nbsp;</a>
+		<a id="signup">SIGN UP&nbsp;&nbsp;&nbsp;</a>
+	</div>
+</nav>
+
+<header>
+	<figure style="text-align : center;">
+		<img src="img/logos.PNG" >
+	</figure>
+	
+</header>
+
+<!-- signup Section -->
+
+<section id="signup">
+
+
+ <form id="signUpForm">
+ <h2 style="text-align : center;">Sign Up</h2>
+
+성 <input id="lname" type="text" placeholder="Last Name" required="required" data-validation-required-message="Please enter your last name.">
+ <br>
+ 
+이름 <input id="fname" type="text" placeholder="First Name" required="required" data-validation-required-message="Please enter your first name.">
+ <br>
+ 
+ID <input id="id" type="text" placeholder="ID" required="required" data-validation-required-message="Please enter your ID.">
+ <button>중복 확인</button>
+ <br>
+ 
+Password
+<input id="pwd" type="password"  maxlength="15" data-validation-required-message="Please enter your password.">
+<br>
+
+Gender
+<input name ="gender" type="radio" > 남자
+<input name ="gender" type="radio" > 여자
+<br>
+
+Birthday
+<input id="bday" type="date" placeholder="Birthday" required="required" min="1918-01-01" max="2005-01-01" data-validation-required-message="Please enter your birthday.">
+<br>
+
+Address
+<input id="address" type="text" placeholder="Address(ex)서울시 강남구)" required="required" data-validation-required-message="Please enter your address.">
+<br>
+
+Email Address
+<input id="email" type="email" placeholder="Email Address(xxx@xxx)" required="required" data-validation-required-message="Please enter your email address.">
+<br>
+
+Phone Number
+<input id="phone" type="tel" placeholder="Phone Number(xxx-xxxx-xxxx)" required="required" data-validation-required-message="Please enter your phone number.">
+<br>
+
+<div id="hobby">
+Hobby                
+<input name="hobby" type="checkbox" value="hiking"> hiking
+<input name="hobby" type="checkbox" value="sports"> sports
+<input name="hobby" type="checkbox" value="cultural life"> cultural life
+<input name="hobby" type="checkbox" value="game"> game
+<input name="hobby" type="checkbox" value="cultural life"> etc    
+</div>
+<br>
+Self-Introduction
+<br>
+<textarea id="selfintro"  rows="20" cols="50" placeholder="Self-Introduction" required="required" data-validation-required-message="Please enter your introduction."></textarea>
+<br>
+
+<button type="submit" id="sendMessageButton">Sign Me Up</button>
+</form>
+</section>
+</body>
+</html>
