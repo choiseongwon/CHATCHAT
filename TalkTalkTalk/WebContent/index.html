@@ -124,27 +124,88 @@ button:active{
 background-color: #ffff80; 
 }
 
+        .setDiv {
+            text-align: center;
+        }
+        .mask {
+            position:absolute;
+            left:0;
+            top:0;
+            z-index:9999;
+            background-color:#000;
+            display:none;
+        }
+        .window {
+            display: none;
+            background-color: #ffffff;
+            height: 200px;
+            z-index:99999;
+        }
+
+#loginForm {
+	font-family : 'BMJUA';
+}
+
 </style>
 </head>
 <body>
     <script>
-	    function fnMove(seq){
-	        var offset = $("#div" + seq).offset();
-	        $('html, body').animate({scrollTop : offset.top}, 400);
-	    }
-	    
-	    $(document).ready(function () {
-	   	 $("input").focus(function () {
-	       $(this).css("background-color", "#e6f2ff");
-	    });
-	    
-	    $("input").blur(function () {
-	   	 $(this).css("background-color", "white");
-	    });
-	    });
+					function wrapWindowByMask() {
+						// 화면의 높이와 너비를 변수로 만듭니다.
+						var maskHeight = $(document).height();
+						var maskWidth = $(window).width();
 
-	    
-    </script>
+						// 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정합니다.
+						$('.mask').css({
+							'width' : maskWidth,
+							'height' : maskHeight
+						});
+
+						// fade 애니메이션 : 1초 동안 검게 됐다가 80%의 불투명으로 변합니다.
+						$('.mask').fadeIn(1000);
+						$('.mask').fadeTo("slow", 0.8);
+
+						// 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듭니다.
+						var left = ($(window).scrollLeft() + ($(window).width() - $(
+								'.window').width()) / 2);
+						var top = ($(window).scrollTop() + ($(window).height() - $(
+								'.window').height()) / 2);
+
+						// css 스타일을 변경합니다.
+						$('.window').css({
+							'left' : left,
+							'top' : top,
+							'position' : 'absolute'
+						});
+
+						// 레이어 팝업을 띄웁니다.
+						$('.window').show();
+					}
+
+					function fnMove(seq) {
+						var offset = $("#div" + seq).offset();
+						$('html, body').animate({
+							scrollTop : offset.top
+						}, 400);
+					}
+
+					$(document).ready(function() {
+						$("#layerPopup").hide();
+						$("input").focus(function() {
+							$(this).css("background-color", "#e6f2ff");
+						});
+
+						$("input").blur(function() {
+							$(this).css("background-color", "white");
+						});
+						$('#nav_login').click(function(e) {
+							// preventDefault는 href의 링크 기본 행동을 막는 기능입니다.
+							e.preventDefault();
+							wrapWindowByMask();
+						});
+					});
+				</script>
+				
 <nav id="top_nav">
 	<div>
 		<span id="app" >CHAT CHAT</span>
@@ -153,14 +214,30 @@ background-color: #ffff80;
 		<a id="nav_sns">SNS&nbsp;&nbsp;&nbsp;</a>
 		<a id="nav_signup" onclick="fnMove('1')">SIGN UP&nbsp;&nbsp;&nbsp;</a>
 		<a id="nav_about" onclick="fnMove('2')">ABOUT&nbsp;&nbsp;</a>
+		<a id="nav_login">LOG IN&nbsp;&nbsp;</a>
 	</div>
 </nav>
+
+<div class="setDiv">
+    <div class="mask"></div>
+    <div class="window">
+        <form id="loginForm" >
+                 아이디 <input name="userid" type="text">
+         <br>        
+                  패스워드 <input name="passwprd" type="password"> 
+         <br>         
+		<button type="submit" id="sendLoginButton">로그인</button>
+
+         </form>
+    </div>
+</div>
 
 <header>
 	<figure style="text-align : center; padding : 30px;">
 		<img src="img/logos.PNG" >
 	</figure>
 </header>
+
 
 <!-- signup Section -->
 <div id="div1">
