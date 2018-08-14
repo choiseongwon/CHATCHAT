@@ -10,6 +10,7 @@
 body{
 	margin : 0px;
 }
+
 #top_nav{
 	text-decoration:none;
 	font-family: 'BMJUA';
@@ -18,11 +19,14 @@ body{
 	padding : 40px;
 	border: none;
 	margin : 0 auto;
+	position : fixed;
+	top:0; left:0; width:95%;
 }
 
 #top_nav>div>span {
 	font-size : 35px;
 }
+
 #top_nav>div>a, #top_nav>div>a:visited, link{
 	color : #ffffff;
 	text-decoration:none;
@@ -42,7 +46,7 @@ body{
 header, p{
 	  background-color: #91C8E0;
 	  margin : 0px;
-	  height : 800px;
+	  height : 950px;
 }
 
 figure{
@@ -75,7 +79,7 @@ font-family: 'BMJUA';
 font-size : 20px;
 text-align: left;
 top: 150px;
-padding-top:100px
+padding-top : 100px;
 }
 
 
@@ -143,7 +147,7 @@ background-color: #91C8E0;
             height: 180px;
             z-index:99999;
             opacity: 0.85;
-            padding-top:10px
+            padding-top:10px;
         }
 
 #loginForm {
@@ -207,12 +211,26 @@ background-color: #91C8E0;
 						$("input").blur(function() {
 							$(this).css("background-color", "white");
 						});
+						
 						$('#nav_login').click(function(e) {
 							// preventDefault는 href의 링크 기본 행동을 막는 기능입니다.
 							e.preventDefault();
 							wrapWindowByMask();
 						});
+						
+						$('#nav_sns').click(function() {
+							$(this).attr("href", "sns.html");
+						});				
+						
+						$('#nav_translate').click(function() {
+							$(this).attr("href", "translate.html");
+						});		
+						
+						$('#nav_mypage').click(function() {
+							$(this).attr("href", "mypage.html");
+						});			
 					});
+					
 				</script>
 				
 <nav id="top_nav">
@@ -236,13 +254,13 @@ background-color: #91C8E0;
                   패스워드 <input name="passwprd" type="password"> 
          <br>         
 		<button type="submit" id="sendLoginButton">로그인</button>
-	    <button type="submit" id="sendLogoutButton">취소</button>
+	    <button type="submit" id="CancleButton">취소</button>
          </form>
     </div>
 </div>
 
 <header>
-	<figure style="text-align : center; padding : 30px;">
+	<figure style="text-align : center; padding : 150px;">
 		<img src="img/logos.PNG" >
 	</figure>
 </header>
