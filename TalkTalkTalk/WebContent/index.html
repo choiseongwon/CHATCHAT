@@ -21,6 +21,7 @@ body{
 	margin : 0 auto;
 	position : fixed;
 	top:0; left:0; width:95%;
+	z-index : 100;
 }
 
 #top_nav>div>span {
@@ -158,6 +159,19 @@ background-color: #91C8E0;
 	width: 50%;
 }
 
+#top {
+	position: fixed;
+ 	right: 5%;
+  	bottom: 50px;
+  	display: none;
+	margin: 50px;
+	padding: 50px 50px;
+  	cursor: pointer;
+  	background-color: white;
+ 	background-image: url("/edu/images/arrow.png");
+ 	background-size: 100px 100px;
+  	border: none;
+}
 
 </style>
 </head>
@@ -229,8 +243,22 @@ background-color: #91C8E0;
 						$('#nav_mypage').click(function() {
 							$(this).attr("href", "mypage.html");
 						});			
-					});
 					
+					
+					     $(window).scroll(function() {
+					        if ($(this).scrollTop() > 10) {
+					            $('#top').fadeIn();
+					        } else {
+					            $('#top').fadeOut();
+					        }
+					    });  
+					    
+					    $("#top").click(function() {
+					        $('html, body').animate({
+					            scrollTop : 0
+					        }, 300)
+					    });
+					});
 				</script>
 				
 <nav id="top_nav">
@@ -341,6 +369,7 @@ The one who was born a genius can't win against the one who tries,
 and the one who tries can't win against the one who enjoys!
 	</pre>
 </div>
+<button id="top"></button>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
