@@ -24,6 +24,7 @@ body{
 	position : fixed;
 	z-index : 100;
 	top:0; left:0; width:95%;
+	z-index : 100;
 }
 
 #top_nav>div>span {
@@ -106,6 +107,12 @@ input[type=text], [type=tel], [type=password], [type=date], [type=email]  {
     border-bottom: 2px solid #91C8E0;
 }
 
+input[type=date], input::placeholder, textarea::placeholder{
+font-family: 'BMJUA';
+font-size : 15px;
+}
+
+
 #hobby{
 width: 650px;
 }
@@ -161,6 +168,114 @@ background-color: #91C8E0;
 	width: 50%;
 }
 
+#top {
+	position: fixed;
+ 	right: 5%;
+  	bottom: 50px;
+  	display: none;
+	margin: 50px;
+	padding: 50px 50px;
+  	cursor: pointer;
+  	background-color: white;
+ 	background-image: url("arrow.png");
+ 	background-size: 100px 100px;
+  	border: none;
+  	box-shadow: 0 0px white; 
+}
+
+.dropdown-content {
+	display : none;
+	position : absolute;
+	background-color : #f9f9f9;
+	min-width : 160px;
+	box-shadow : 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index : 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #2C3E50;
+  font-family: BMJUA;
+ position : fixed;
+ width : 1300px;
+ z-index : 100;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float:left; 
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px; 
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 </style>
 </head>
@@ -234,10 +349,25 @@ background-color: #91C8E0;
 						$('#nav_mypage').click(function() {
 							$(this).attr("href", "mypage.html");
 						});			
-					});
 					
+					
+					     $(window).scroll(function() {
+					        if ($(this).scrollTop() > 10) {
+					            $('#top').fadeIn();
+					        } else {
+					            $('#top').fadeOut();
+					        }
+					    });  
+					    
+					    $("#top").click(function() {
+					        $('html, body').animate({
+					            scrollTop : 0
+					        }, 300)
+					    });
+					});
 				</script>
 				
+<<<<<<< HEAD
 <nav id="top_nav">
 	<div>
 		<span id="app" >CHAT CHAT</span>
@@ -251,6 +381,33 @@ background-color: #91C8E0;
 		   
 	
 </nav>
+=======
+<!-- <nav id="top_nav"> -->
+<!-- 	<div> -->
+<!-- 		<span id="app" >CHAT CHAT</span> -->
+<!-- 		<a id="nav_mypage">MY PAGE&nbsp;&nbsp;&nbsp;</a> -->
+<!-- 		<a id="nav_translate">TRANSLATE&nbsp;&nbsp;&nbsp;</a> -->
+<!-- 		<a id="nav_signup" onclick="fnMove('1')">SIGN UP&nbsp;&nbsp;&nbsp;</a> -->
+<!-- 		<a id="nav_about" onclick="fnMove('2')">ABOUT&nbsp;&nbsp;</a> -->
+<!-- 		<a id="nav_login">LOG IN&nbsp;&nbsp;</a> -->
+<!-- 	</div> -->
+<!-- </nav> -->
+
+<div class="navbar">
+  <a href="#news">ABOUT</a>
+   <a href="#home">MY PAGE</a>
+  <div class="dropdown">
+    <button class="dropbtn">Translate 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div> 
+</div>
+>>>>>>> branch 'master' of https://github.com/choiseongwon/CHATCHAT.git
 
 
 
@@ -364,6 +521,7 @@ The one who was born a genius can't win against the one who tries,
 and the one who tries can't win against the one who enjoys!
 	</pre>
 </div>
+<button id="top"></button>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
