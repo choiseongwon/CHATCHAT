@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Page</title>
+<style>
+@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
+body {
+	margin : 0px;
+}
+
+#left_nav{
+	float : left;
+	background-color: #91C8E0;
+	width : 320px;
+	height : 960px;
+	position : fixed;
+}
+
+#top_nav{
+	font-family: 'BMJUA';
+	background-color : #2C3E50;
+	color : #ffffff;
+	padding : 40px;
+	border: none;
+	margin : 0 auto;
+}
+
+div>a:hover {
+	color : #D4DFE6;
+}
+div>a:active{
+	color : #91C8E0;
+}
+
+
+div>span {
+	font-size : 35px;
+}
+div>a {
+	float:right;
+	font-size:20px;
+	padding : 8px;
+}
+
+img {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.5rem solid rgba(255, 255, 255, 0.5);
+    width : 250px;
+    height : 250px;
+    border-radius : 100%;
+    position : absolute;
+    left : 65px;
+    top : 150px;
+}
+ul{
+   list-style:none;
+   position : absolute;
+   left : 50px;
+   top : 370px;
+}
+.navibarmenu{
+	color : #D4DFE6;
+/* 	color : #ff6600; 주황색*/
+	font-family: 'BMJUA';
+	font-size : 25px;
+}
+
+.navibarmenu:hover{
+color : #ffa366;
+	
+}
+
+.navibarmenu:active{
+	color : #ff6600;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav id="top_nav">
+	<div>
+		<span id="title">CHAT CHAT</span>
+		<a id="ABOUT">ABOUT&nbsp;&nbsp;</a>
+		<a id="mypage">MY PAGE&nbsp;&nbsp;&nbsp;</a>
+		<a id="translate">TRANSLATE&nbsp;&nbsp;&nbsp;</a>
+		<a id="sns">SNS&nbsp;&nbsp;&nbsp;</a>
+		<a id="signup">SIGN UP&nbsp;&nbsp;&nbsp;</a>
+	</div>
+</nav>
+
+
+<div>
+
+
+
+<nav id="left_nav">
+	<span>
+		<img src = "img/suji.jpg">
+	</span>
+	<div>
+		<ul class="navi">
+			<li>
+				 <a class="navibarmenu">글쓰기</a>
+			</li>
+			<br>
+			<li>
+				<a class="navibarmenu">친구</a>
+			</li>
+			<br>
+			<li>
+				<a class="navibarmenu">그룹보기</a>
+			</li>
+			<br>
+			<li>
+				<a class="navibarmenu">대화하기</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+</div>
+
+
+</body>
+</html>
