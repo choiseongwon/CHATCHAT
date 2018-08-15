@@ -8,7 +8,7 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <style>
 @font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
-
+url(https://fonts.googleapis.com/css?family=BenchNine:700);
 body{
 	margin : 0px;
 }
@@ -137,7 +137,7 @@ font-size : 15px;
 width: 650px;
 }
 
-button {
+button:not(.logos) {
 	margin: 10px;
 	padding: 10px 15px;
 	font-family: 'BMJUA';
@@ -217,6 +217,8 @@ background-color: #91C8E0;
     font-size: 20px;
     text-align: center;
     padding: 14px 16px;
+    padding-top : 25px;
+    padding-bottom : 25px;
     text-decoration: none;
 }
 
@@ -236,7 +238,7 @@ background-color: #91C8E0;
 	background-color : #f9f9f9;
 	min-width : 160px;
 	z-index : 1;
-	top : 51px;
+	top : 73px;
 }
 
 .dropdown-content a {
@@ -254,6 +256,84 @@ nav{
 	width : 500px;
 	float : left;
 }
+/* #D4DFE6 */
+   .button-wrapper {
+        display: inline-block;
+    }
+    .dark-button-2 {
+        background: #333;
+    }
+    .button {
+        background: #2C3E50;
+        border: none;
+        padding: 2px;
+        display: block;
+        position: absolute;
+        top : 20px;
+        left : 1300px;
+        overflow: hidden;
+        transition: all .35s ease-in-out .35s;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    }
+    
+    .dark-button-2 .button,
+    .dark-button-2 .button span {
+        background: #2C3E50;
+        color: #fff;
+        font-size : 25px;
+    }
+    .dark-button-2 .button:after,
+    .dark-button-2 .button:before,
+    .dark-button-2 .button:hover span {
+        background: #ff6600;
+        color: #444;
+    } 
+    span {
+        display: block;
+        padding: 10px 10px;
+        background: #fff;
+        z-index: 100;
+        position: relative;
+        transition: all .35s ease-in-out .35s;
+    }
+    .button:hover span {
+        background: #36B4C7;
+        color: #fff;
+        transition: all .35s ease-in-out .35s;
+    }
+    .button:after {
+        bottom: -100%;
+        right: -100%;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #36B4C7;
+        transition: all .35s ease-in-out .5s;
+    }
+    .button:hover:after {
+        right: 0;
+        bottom: 0;
+        transition: all ease-in-out .35s;
+    }
+    .button:before {
+        top: -100%;
+        left: -100%;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #36B4C7;
+        transition: all .35s ease-in-out .5s;
+    }
+    .button:hover:before {
+        left: 0;
+        top: 0;
+        transition: all ease-in-out .35s;
+    }
+
 
 </style>
 </head>
@@ -371,6 +451,15 @@ nav{
   <a id="nav_signup"  onclick="fnMove('1')">SIGN UP</a>
   <a id="nav_login">LOG IN</a>
   </nav>
+  
+ 
+<div class="dark-button-2 button-wrapper">
+    <div class="button">
+        <span>
+            CHAT CHAT
+        </span>
+    </div>  
+</div>
 </div>
 
 
