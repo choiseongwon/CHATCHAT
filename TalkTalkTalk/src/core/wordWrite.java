@@ -19,7 +19,7 @@ public class wordWrite extends HttpServlet {
 			f.mkdirs();
 		
 		try(FileWriter writer = new FileWriter("c:/iotest/a.txt")) {
-			writer.write(request.getParameter("word") + "    " + request.getParameter("word_mean"));
+			writer.write(request.getParameter("word") + "   " + request.getParameter("word_mean"));
 			writer.close();
 		}
 	}
