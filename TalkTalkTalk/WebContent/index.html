@@ -7,419 +7,312 @@
   <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 <style>
-@font-face { font-family: 'BMJUA'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff'); font-weight: normal; font-style: normal; }
-url(https://fonts.googleapis.com/css?family=BenchNine:700);
-body{
-	margin : 0px;
-}
-
-
-/* #top_nav{ */
-/* 	text-decoration:none; */
-/* 	font-family: 'BMJUA'; */
-/* 	background-color : #2C3E50; */
-/* 	color : #ffffff; */
-/* 	padding : 40px; */
-/* 	border: none; */
-/* 	margin : 0 auto; */
-/* 	position : fixed; */
-/* 	top:0; left:0; width:95%; */
-/* 	z-index : 100; */
-/* } */
-=======
-#top_nav{
-	text-decoration:none;
+@font-face {
 	font-family: 'BMJUA';
-	background-color : #2C3E50;
-	color : #ffffff;
-	padding : 40px;
-	border: none;
-	margin : 0 auto;
-	position : fixed;
-	z-index : 100;
-	top:0; left:0; width:95%;
-	z-index : 100;
-}
->>>>>>> refs/remotes/origin/master
-
-/* #top_nav>div>span { */
-/* 	font-size : 35px; */
-/* } */
-
-/* #top_nav>div>a, #top_nav>div>a:visited, link{ */
-/* 	color : #ffffff; */
-/* 	text-decoration:none; */
-/* 	float:right; */
-/* 	font-size:20px; */
-/* 	padding : 8px; */
-/* } */
-
-/* #top_nav>div>a:hover { */
-/* 	cursor: pointer; */
-/* 	color : #D4DFE6; */
-/* } */
-/* #top_nav>div>a:active{ */
-/* 	color : #91C8E0; */
-/* } */
-
-header, p{
-
-	  margin : 0px;
-	  height : 950px;
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-figure{
-	margin : 0px;
-	text-align : center; 
-	padding : 60px;
-	  background-color: #91C8E0;
-}
-
-#title{
-	font-size : 40px;
-}
-
-.about{
-	height : 850px;
-}
-.about>#title_about{
-font-family: 'BMJUA';
-		text-align : center;
-	font-size : 60px;
-
-}
-.about>#about_intro, #about_moto{
+	url (https: //fonts.googleapis.com /css?family=BenchNine: 700);
+	
+	#top_nav {
+		text-decoration: none;
 		font-family: 'BMJUA';
-		text-align : center;
-		font-size : x-large;
-		margin : 0px;
-		
-}
-
-#signup{
-width:700px;
-height:800px;
-font-family: 'BMJUA';
-font-size : 20px;
-text-align: left;
-top: 100px;
-padding-top : 30px;
-}
-
-
-#signUpForm{
-left: 400px;
-position:absolute;
-}
-
-input{
-margin:12px;
-padding: 20px;
-}
-
-
-input[type=text], [type=tel], [type=password], [type=date], [type=email]  {
-    width: 40%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid #91C8E0;
-}
-
-input[type=date], input::placeholder, textarea::placeholder{
-font-family: 'BMJUA';
-font-size : 15px;
-}
-
-
-#hobby{
-width: 650px;
-}
-
-button:not(.logos) {
-	margin: 10px;
-	padding: 10px 15px;
-	font-family: 'BMJUA';
-  	font-size: 12pt;
-  	cursor: pointer;
-    text-align: center;
- 	color: #fff; 
-  	background-color: #2C3E50;
-  	border: none;
-  	border-radius: 15px;
-  	box-shadow: 0 4px #ccccff; 
-}
-
-button:hover{
-background-color: #D4DFE6; 
-}
-
-button:active{
-background-color: #91C8E0; 
-}
-
-        .setDiv {
-            text-align: center;
-        }
-        .mask {
-            position:absolute;
-            left:0;
-            top:0;
-            z-index:9999;
-            background-color:#000;
-            display:none;
-        }
-        .window {
-            display: none;
-            background-color: #ffffff;
-            width: 350px;
-            height: 220px;
-            z-index:99999;
-            opacity: 0.85;
-            padding-top:10px;
-        }
-
-#loginForm {
-	font-family : 'BMJUA';
-}
-
-#loginForm input[type=text], input[type=password] {
-	width: 50%;
-}
-
-#top {
-	position: fixed;
- 	right: 5%;
-  	bottom: 50px;
-  	display: none;
-	margin: 50px;
-	padding: 50px 50px;
-  	cursor: pointer;
-  	background-color: white;
- 	background-image: url("img/arrow.png");
- 	background-size: 100px 100px;
-  	border: none;
-  	box-shadow: 0 0px white; 
-}
-
-
-/* Navbar container */
-.navbar {
-  overflow: hidden;
-  background-color: #2C3E50;
-  font-family: BMJUA;
-}
-
-.navbar a {
-    color: white;
-    float: left;
-    font-size: 20px;
-    text-align: center;
-    padding: 14px 16px;
-    padding-top : 25px;
-    padding-bottom : 25px;
-    text-decoration: none;
-}
-
-.dropdown {
-	overflow : hidden;
-	float : left;
-	outline: none;
-}
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-	background-color : red;
-}
-
-.dropdown-content {
-	display:none;
- 	position : absolute; 
-	background-color : #f9f9f9;
-	min-width : 160px;
-	z-index : 1;
-	top : 73px;
-}
-
-.dropdown-content a {
-	float : none;
-	color : black;
-	display:block;
-	text-align: left;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-nav{
-	width : 500px;
-	float : left;
-}
-/* /* #D4DFE6 */ */
-/*    .button-wrapper { */
-/*         display: inline-block; */
-/*     } */
-/*     .dark-button-2 { */
-/*         background: #333; */
-/*     } */
-/*     .button { */
-/*         background: #2C3E50; */
-/*         border: none; */
-/*         padding: 2px; */
-/*         display: block; */
-/*         position: absolute; */
-/*         top : 20px; */
-/*         left : 1300px; */
-/*         overflow: hidden; */
-/*         transition: all .35s ease-in-out .35s; */
-/*         margin: 0 auto; */
-/*         width: 150px; */
-/*         text-align: center; */
-/*     } */
-    
-/*     .dark-button-2 .button, */
-/*     .dark-button-2 .button span { */
-/*         background: #2C3E50; */
-/*         color: #fff; */
-/*         font-size : 25px; */
-/*     } */
-/*     .dark-button-2 .button:after, */
-/*     .dark-button-2 .button:before, */
-/*     .dark-button-2 .button:hover span { */
-/*         background: #ff6600; */
-/*         color: #444; */
-/*     }  */
-/*     span { */
-/*         display: block; */
-/*         padding: 10px 10px; */
-/*         background: #fff; */
-/*         z-index: 100; */
-/*         position: relative; */
-/*         transition: all .35s ease-in-out .35s; */
-/*     } */
-/*     .button:hover span { */
-/*         background: #36B4C7; */
-/*         color: #fff; */
-/*         transition: all .35s ease-in-out .35s; */
-/*     } */
-/*     .button:after { */
-/*         bottom: -100%; */
-/*         right: -100%; */
-/*         content: ""; */
-/*         width: 100%; */
-/*         height: 100%; */
-/*         position: absolute; */
-/*         background: #36B4C7; */
-/*         transition: all .35s ease-in-out .5s; */
-/*     } */
-/*     .button:hover:after { */
-/*         right: 0; */
-/*         bottom: 0; */
-/*         transition: all ease-in-out .35s; */
-/*     } */
-/*     .button:before { */
-/*         top: -100%; */
-/*         left: -100%; */
-/*         content: ""; */
-/*         width: 100%; */
-/*         height: 100%; */
-/*         position: absolute; */
-/*         background: #36B4C7; */
-/*         transition: all .35s ease-in-out .5s; */
-/*     } */
-/*     .button:hover:before { */
-/*         left: 0; */
-/*         top: 0; */
-/*         transition: all ease-in-out .35s; */
-/*     } */
-
-
+		background-color: #2C3E50;
+		color: #ffffff;
+		padding: 40px;
+		border: none;
+		margin: 0 auto;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 95%;
+		z-index: 100;
+	}
+	
+	body {
+		margin: 0px;
+	}
+	
+	header, p {
+		margin: 0px;
+		height: 950px;
+	}
+	
+	figure {
+		margin: 0px;
+		text-align: center;
+		padding: 60px;
+		background-color: #91C8E0;
+	}
+	
+	#title {
+		font-size: 40px;
+	}
+	
+	.about {
+		height: 850px;
+	}
+	
+	.about>#title_about {
+		font-family: 'BMJUA';
+		text-align: center;
+		font-size: 60px;
+	}
+	
+	.about>#about_intro, #about_moto {
+		font-family: 'BMJUA';
+		text-align: center;
+		font-size: x-large;
+		margin: 0px;
+	}
+	
+	#signup {
+		width: 700px;
+		height: 800px;
+		font-family: 'BMJUA';
+		font-size: 20px;
+		text-align: left;
+		top: 100px;
+		padding-top: 30px;
+	}
+	
+	#signUpForm {
+		left: 400px;
+		position: absolute;
+	}
+	
+	input {
+		margin: 12px;
+		padding: 20px;
+	}
+	
+	input[type=text], [type=tel], [type=password], [type=date], [type=email]
+		{
+		width: 40%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 2px solid #91C8E0;
+	}
+	
+	input[type=date], input::placeholder, textarea::placeholder {
+		font-family: 'BMJUA';
+		font-size: 15px;
+	}
+	
+	#hobby {
+		width: 650px;
+	}
+	
+	button {
+		margin: 10px;
+		padding: 10px 15px;
+		font-family: 'BMJUA';
+		font-size: 12pt;
+		cursor: pointer;
+		text-align: center;
+		color: #fff;
+		background-color: #2C3E50;
+		border: none;
+		border-radius: 15px;
+		box-shadow: 0 4px #ccccff;
+	}
+	
+	button:hover {
+		background-color: #D4DFE6;
+	}
+	
+	button:active {
+		background-color: #91C8E0;
+	}
+	
+	.setDiv {
+		text-align: center;
+	}
+	
+	.mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 9999;
+		background-color: #000;
+		display: none;
+	}
+	
+	.window {
+		display: none;
+		background-color: #ffffff;
+		width: 350px;
+		height: 220px;
+		z-index: 99999;
+		opacity: 0.85;
+		padding-top: 10px;
+	}
+	
+	#loginForm {
+		font-family: 'BMJUA';
+	}
+	
+	#loginForm input[type=text], input[type=password] {
+		width: 50%;
+	}
+	
+	#button_top {
+		position: fixed;
+		right: 5%;
+		bottom: 50px;
+		display: none;
+		margin: 50px;
+		padding: 50px 50px;
+		cursor: pointer;
+		background-color: white;
+		background-image: url("img/arrow.png");
+		background-size: 100px 100px;
+		border: none;
+		box-shadow: 0 0px white;
+	}
+	
+	/* Navbar container */
+	.navbar {
+		overflow: hidden;
+		background-color: #2C3E50;
+		font-family: BMJUA;
+	}
+	
+	.navbar a {
+		color: white;
+		float: left;
+		font-size: 20px;
+		text-align: center;
+		padding: 14px 16px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		text-decoration: none;
+	}
+	
+	.dropdown {
+		overflow: hidden;
+		float: left;
+		outline: none;
+	}
+	
+	.navbar a:hover, .dropdown:hover .dropbtn {
+		background-color: red;
+	}
+	
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		z-index: 1;
+		top: 73px;
+	}
+	
+	.dropdown-content a {
+		float: none;
+		color: black;
+		display: block;
+		text-align: left;
+	}
+	
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+	
+	nav {
+		width: 500px;
+		float: left;
+	}
 </style>
 </head>
 <body>
-
-
     <script>
-					function wrapWindowByMask() {
-						// 화면의 높이와 너비를 변수로 만듭니다.
-						var maskHeight = $(document).height();
-						var maskWidth = $(window).width();
+			function wrapWindowByMask() {
+				// 화면의 높이와 너비를 변수로 만듭니다.
+				var maskHeight = $(document).height();
+				var maskWidth = $(window).width();
 
-						// 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정합니다.
-						$('.mask').css({
-							'width' : maskWidth,
-							'height' : maskHeight
-						});
+				// 마스크의 높이와 너비를 화면의 높이와 너비 변수로 설정합니다.
+				$('.mask').css({
+					'width' : maskWidth,
+					'height' : maskHeight
+				});
 
-						// fade 애니메이션 : 1초 동안 검게 됐다가 80%의 불투명으로 변합니다.
-						$('.mask').fadeIn(1000);
-						$('.mask').fadeTo("slow", 0.8);
+				// fade 애니메이션 : 1초 동안 검게 됐다가 80%의 불투명으로 변합니다.
+				$('.mask').fadeIn(1000);
+				$('.mask').fadeTo("slow", 0.8);
 
-						// 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듭니다.
-						var left = ($(window).scrollLeft() + ($(window).width() - $(
-								'.window').width()) / 2);
-						var top = ($(window).scrollTop() + ($(window).height() - $(
-								'.window').height()) / 2);
+				// 레이어 팝업을 가운데로 띄우기 위해 화면의 높이와 너비의 가운데 값과 스크롤 값을 더하여 변수로 만듭니다.
+				var left = ($(window).scrollLeft() + ($(window).width() - $(
+						'.window').width()) / 2);
+				var top = ($(window).scrollTop() + ($(window).height() - $(
+						'.window').height()) / 2);
 
-						// css 스타일을 변경합니다.
-						$('.window').css({
-							'left' : left,
-							'top' : top,
-							'position' : 'absolute'
-						});
+				// css 스타일을 변경합니다.
+				$('.window').css({
+					'left' : left,
+					'top' : top,
+					'position' : 'absolute'
+				});
 
-						// 레이어 팝업을 띄웁니다.
-						$('.window').show();
+				// 레이어 팝업을 띄웁니다.
+				$('.window').show();
+			}
+
+			function fnMove(seq) {
+				var offset = $("#div" + seq).offset();
+				$('html, body').animate({
+					scrollTop : offset.top
+				}, 400);
+			}
+
+			$(document).ready(function() {
+				$("#layerPopup").hide();
+				$("input").focus(function() {
+					$(this).css("background-color", "#e6f2ff");
+				});
+
+				$("input").blur(function() {
+					$(this).css("background-color", "white");
+				});
+
+				$('#nav_login').click(function(e) {
+					// preventDefault는 href의 링크 기본 행동을 막는 기능입니다.
+					e.preventDefault();
+					wrapWindowByMask();
+				});
+
+				$('#nav_sns').click(function() {
+					$(this).attr("href", "sns.html");
+				});
+
+				$('#nav_mypage').click(function() {
+					$(this).attr("href", "mypage.html");
+				});
+
+				$(window).scroll(function() {
+					if ($(this).scrollTop() > 10) {
+						$('#top').fadeIn();
+					} else {
+						$('#top').fadeOut();
 					}
+				});
 
-					function fnMove(seq) {
-						var offset = $("#div" + seq).offset();
-						$('html, body').animate({
-							scrollTop : offset.top
-						}, 400);
-					}
-
-					$(document).ready(function() {
-						$("#layerPopup").hide();
-						$("input").focus(function() {
-							$(this).css("background-color", "#e6f2ff");
-						});
-
-						$("input").blur(function() {
-							$(this).css("background-color", "white");
-						});
-						
-						$('#nav_login').click(function(e) {
-							// preventDefault는 href의 링크 기본 행동을 막는 기능입니다.
-							e.preventDefault();
-							wrapWindowByMask();
-						});
-						
-						$('#nav_sns').click(function() {
-							$(this).attr("href", "sns.html");
-						});
-
-						$('#nav_mypage').click(function() {
-							$(this).attr("href", "mypage.html");
-						});
-					
-					
-					     $(window).scroll(function() {
-					        if ($(this).scrollTop() > 10) {
-					            $('#top').fadeIn();
-					        } else {
-					            $('#top').fadeOut();
-					        }
-					    });  
-					    
-					    $("#top").click(function() {
-					        $('html, body').animate({
-					            scrollTop : 0
-					        }, 300)
-					    });
-					});
-				</script>
+				$("#top").click(function() {
+					$('html, body').animate({
+						scrollTop : 0
+					}, 300)
+				});
+			});
+		</script>
+			
 			
 <div class="navbar">
 <nav>
@@ -450,22 +343,10 @@ nav{
   </div> 
   <a id="nav_signup"  onclick="fnMove('1')">SIGN UP</a>
   <a id="nav_login">LOG IN</a>
-  <a>CHAT CHAT</a>
   </nav>
   </div>
  
-<!-- <div class="dark-button-2 button-wrapper"> -->
-<!--     <div class="button"> -->
-<!--         <span> -->
-<!--             CHAT CHAT -->
-<!--         </span> -->
-<!--     </div>   -->
-<!-- </div> -->
-<!-- </div> -->
-
-
-
-
+<!-- 로그인 시작 -->
 <div class="setDiv">
     <div class="mask"></div>
     <div class="window">
@@ -477,12 +358,12 @@ nav{
 		<button type="submit" id="sendLoginButton">로그인</button>
 	    <button type="submit" id="CancleButton">취소</button>
 	     <div id="naver_id_login"></div>
-	  
-	    
-         </form>
+	  </form>
     </div>
-    
 </div>
+<!-- 로그인 끝 -->
+
+<!-- 네이버 로그인 -->
 <script type="text/javascript">
   	var naver_id_login = new naver_id_login("EBn2xNkgXpNhVGfN1aF0", "http://localhost:8000/TalkTalkTalk/index.html");
   	var state = naver_id_login.getUniqState();
@@ -493,6 +374,7 @@ nav{
   	naver_id_login.init_naver_id_login();
   </script>
 
+<!-- 배경화면 사진 -->
 <header>
 	<figure >
 		<img src="img/logos.PNG" >
@@ -500,7 +382,6 @@ nav{
 </header>
 
 <!-- ABOUT -->
-
 <div class="about" id="div2">
 <br><br><br><br><br><br><br><br>
 	<pre id="title_about">ABOUT</pre>
@@ -516,8 +397,8 @@ and the one who tries can't win against the one who enjoys!
 	<br><br><br><br><br><br><br><br><br>
 </div>
 
-<!-- signup Section -->
-<div id="div1" >
+<!-- 회원가입 폼 시작 -->
+<div id="div1">
 <section id="signup">
  <form id="signUpForm">
  <h1 style="text-align : center;">Sign Up</h1>
@@ -573,10 +454,13 @@ Self-Introduction
 
 <button type="submit" id="sendMessageButton">Sign Me Up</button>
 </form>
+<!-- 회원가입 폼 끝 -->
+
+
 </section>
 </div>
 
-<button id="top"></button>
+<button id="button_top"></button>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
