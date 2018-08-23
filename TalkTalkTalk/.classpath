@@ -14,5 +14,7 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/My/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/My/jsoup-1.11.3.jar"/>
+	<classpathentry kind="lib" path="WebContent/Naver_TodayConversation.jsp"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
